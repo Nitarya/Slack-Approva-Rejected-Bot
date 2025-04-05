@@ -7,7 +7,7 @@ export const onApprovalRequest = async ({ view, ack, body, client }) => {
     const approvalText = view.state.values.approval_text.approval_text.value;
     const requester = body.user.id;
   
-    //5. Send approval request to Approver
+    //Send approval request to Approver
     await client.chat.postMessage({
       channel: approver,
       blocks: [

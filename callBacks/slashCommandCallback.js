@@ -10,12 +10,12 @@ export const callbackfn = async ({ command, ack, body, client }) => {
       // The trigger ID is required to open the modal
       trigger_id: body.trigger_id,
 
-      // The view object defines the structure of the modal
+      // view object defines structure of modal
       view: {
         type: "modal", // This defines the view as a modal
         callback_id: "approval_request", // This ID will be used to handle submission
 
-        // Title of the modal window
+        // Title of modal window
         title: {
           type: "plain_text",
           text: "Approval Request",
@@ -27,7 +27,7 @@ export const callbackfn = async ({ command, ack, body, client }) => {
           text: "Submit",
         },
 
-        // Blocks are UI components inside the modal
+        // Blocks r UI components inside modal
         blocks: [
           {
             // First block: a user selector input
